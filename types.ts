@@ -10,3 +10,7 @@ interface Time {
     from: string
     to: string
 }
+
+export interface DispatchEvent {
+    detail: any
+}

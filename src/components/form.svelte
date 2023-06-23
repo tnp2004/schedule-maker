@@ -4,7 +4,6 @@
 	const dispatch = createEventDispatcher();
 
 	const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-	let time = '';
 	let task: Task = {
 		day: '',
 		id: '',
