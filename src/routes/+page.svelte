@@ -6,7 +6,6 @@
 
 	const addSchedule = (e: any) => {
 		const { task } = e.detail
-		alert(task)
 		schedulesList = [task, ...schedulesList]
 	}
 
