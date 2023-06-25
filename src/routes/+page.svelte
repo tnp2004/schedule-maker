@@ -3,8 +3,9 @@
 	import Form from '../components/form.svelte';
 	import type { DispatchEvent, Task, TaskData } from '../../types';
 	import Table from '../components/table.svelte';
-	let schedulesList: Task = {
-		Monday: [],
+	const mock = [{"id":"1","subject":"Math","room":"OP293","time":{"from":"15:02","to":"17:02"}},{"id":"asd","subject":"xcb","room":"fdb","time":{"from":"15:58","to":"19:58"}},{"id":"asd","subject":"cx","room":"db","time":{"from":"14:57","to":"14:58"}}]
+	const schedulesList: Task = {
+		Monday: [...mock],
 		Tuesday: [],
 		Wednesday: [],
 		Thursday: [],
@@ -32,31 +33,13 @@
 		});
 	};
 
-	function checkTimeGap(startTime: string, endTime: string) {
-      var startTimeParts = startTime.split(":");
-      var endTimeParts = endTime.split(":");
-
-      var startHour = parseInt(startTimeParts[0]);
-      var startMinute = parseInt(startTimeParts[1]);
-      var endHour = parseInt(endTimeParts[0]);
-      var endMinute = parseInt(endTimeParts[1]);
-
-      // Convert start and end time to minutes
-      var startMinutes = startHour * 60 + startMinute;
-      var endMinutes = endHour * 60 + endMinute;
-
-      // Calculate the time gap in minutes
-      var timeGap = endMinutes - startMinutes;
-
-      // Display the time gap
-      return timeGap
-    }
+	
 </script>
 
 <h1 class="text-rose-600">Welcome to Schedule Maker</h1>
 {JSON.stringify(schedulesList)}
 <Form on:add={addSchedule} />
-<Table />
+<Table schedulesList={schedulesList} />
 <div class="w-fit mx-auto my-2">
 	<button class="border-2 p-1 w- hover:bg-gradient-to-r from-slate-100 to-slate-200" on:click={downloadImage}>Download</button>
 </div>

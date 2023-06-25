@@ -12,7 +12,7 @@ export interface TaskData {
     time: Time;
 }
 
-interface Subject {
+export interface Subject {
     id: string;
     subject: string;
     room: string;
