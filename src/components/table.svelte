@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Subject, Task } from '../../types';
 	const timeRange = 1080; // min per day
-	let a = 30;
 
 	export let schedulesList: Task;
 
@@ -31,7 +30,7 @@
 	};
 </script>
 
-<div class="w-5/6 h-fit border-2 mx-auto my-6 grid grid-cols-1 p-2" id="scheduleTable">
+<div class="w-5/6 h-fit border-4 rounded mx-auto my-6 grid grid-cols-1 p-2" id="scheduleTable">
 	<div class="flex border-b-2 last:border-b-0 h-fit">
 		<div class="border-r-2 flex justify-center items-center w-32 mr-2">Mon</div>
 		{#each schedulesList.Monday as task}
