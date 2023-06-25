@@ -2,8 +2,8 @@
 	import type { TaskData } from '../../types';
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
+	const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 
-	const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 	let task: TaskData = {
 		day: 'Monday',
 		id: '',
@@ -36,7 +36,7 @@
 	};
 </script>
 
-<form id="schedule-form" class="w-fit mx-auto rounded border-2 my-2 p-2" on:submit={addTask}>
+<form id="schedule-form" class="w-fit mx-auto rounded bg-white my-2 p-2 drop-shadow-md text-slate-700" on:submit={addTask}>
 	<div class="my-2 text-center">
 		<label class="text-lg font-bold" for="day">Day</label>
 		<select class="border-2 rounded px-1 mx-2" bind:value={task.day} required>

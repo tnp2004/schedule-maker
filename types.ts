@@ -1,6 +1,6 @@
-type Day = 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday';
+type Day = 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | string;
 
-export type Task = {
+export type TSchedule = {
     [K in Day]: Subject[]
 }
 

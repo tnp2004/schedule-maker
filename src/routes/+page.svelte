@@ -1,20 +1,18 @@
 <script lang="ts">
 	import html2canvas from 'html2canvas';
 	import Form from '../components/form.svelte';
-	import type { DispatchEvent, Task, TaskData } from '../../types';
+	import type { DispatchEvent, TSchedule, TaskData } from '../../types';
 	import Table from '../components/table.svelte';
 	const mock = [
 		{ id: 'a', subject: 'a', room: 'a', time: { from: '17:08', to: '18:08' } },
 		{ id: 'b', subject: 'b', room: 'b', time: { from: '19:08', to: '20:08' } }
 	];
-	const schedulesList: Task = {
+	const schedulesList: TSchedule = {
 		Monday: [...mock],
-		Tuesday: [],
+		Tuesday: [...mock],
 		Wednesday: [],
 		Thursday: [],
 		Friday: [],
-		Saturday: [],
-		Sunday: []
 	};
 
 	const addSchedule = (event: DispatchEvent): void => {
@@ -68,7 +66,7 @@
 </script>
 
 <h1 class="text-rose-600">Welcome to Schedule Maker</h1>
-{JSON.stringify(schedulesList)}
+<!-- {JSON.stringify(schedulesList)} -->
 <Form on:add={addSchedule} />
 <Table {schedulesList} />
 <div class="w-fit mx-auto my-2">
