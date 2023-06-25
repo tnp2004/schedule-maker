@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { Task } from '../../types';
+	import type { TaskData } from '../../types';
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
 
 	const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-	let task: Task = {
-		day: '',
+	let task: TaskData = {
+		day: 'Monday',
 		id: '',
 		subject: '',
 		room: '',
@@ -24,7 +24,7 @@
 
 	const resetTask = () => {
 		task = {
-			day: '',
+			day: 'Monday',
 			id: '',
 			subject: '',
 			room: '',
