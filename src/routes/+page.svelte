@@ -8,8 +8,8 @@
 		{ id: 'b', subject: 'b', room: 'b', time: { from: '19:08', to: '20:08' } }
 	];
 	const schedulesList: TSchedule = {
-		Monday: [...mock],
-		Tuesday: [...mock],
+		Monday: [],
+		Tuesday: [],
 		Wednesday: [],
 		Thursday: [],
 		Friday: [],
@@ -64,14 +64,11 @@
 		}
 	};
 </script>
-
-<h1 class="text-rose-600">Welcome to Schedule Maker</h1>
-<!-- {JSON.stringify(schedulesList)} -->
 <Form on:add={addSchedule} />
 <Table {schedulesList} />
-<div class="w-fit mx-auto my-2">
+<div class="w-fit mx-auto mb-2">
 	<button
-		class="border-2 p-1 w- hover:bg-gradient-to-r from-slate-100 to-slate-200"
+		class="border-2 p-1 font-semibold hover:bg-gradient-to-r from-slate-100 to-slate-200"
 		on:click={downloadImage}>Download</button
 	>
 </div>

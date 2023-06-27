@@ -65,5 +65,5 @@
 		<input class="border-2 rounded px-1 mx-2" type="time" required bind:value={task.time.to} />
 	</div>
 
-	<button class="border-2 px-2 font-bold w-full rounded" type="submit">ADD</button>
+	<button class="border-2 px-2 font-bold w-full rounded hover:bg-gradient-to-r from-slate-100 to-slate-200" type="submit">ADD</button>
 </form>
